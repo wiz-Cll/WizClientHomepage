@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, inital-scale=1.0, maximumu-scale=1, minimum-scale=1.0"/>
+
+		<link rel="stylesheet" type="text/css" href="asset/layout/lib.css" media="all" />
+		<link rel="stylesheet" href="asset/layout/media-queries.css" />
+
+		<script type="text/javascript" src="asset/script/jquery.min.js"></script>
+		<script type="text/javascript" src="asset/script/jquery.cookie.js"></script>
+		<!--[if lt IE 9]>
+			<script src="asset/script/html5.js"></script>
+			<script src="asset/script/css3-mediaqueries.js"></script>
+		<![endif]-->
+		<script src="asset/script/wizhome.js"></script>
+	</head>
+
+	<body>
+		<header></header>
+
+		<section>
+			<article id="noti-center">
+				<h2 id="noti-title">通知中心</h2>
+				<a href="" id="noti-body"></a>
+			</article>
+
+			<div id="main">
+				<div id="tabs">
+					<ul id="tab-ul">
+						<li class="tab-item active"><a href="#recent-note">近期笔记</a></li>
+						<li class="tab-item"><a href="#mobil-download">移动端下载</a></li>
+						<li class="tab-item"><a href="#vip">VIP定制</a></li>
+						<li class="tab-item"><a href="#activity">活动专题</a></li>
+						<li class="tab-item"><a href="#effective">效率类汇聚</a></li>
+						<li class="tab-item"><a href="#manager">manager</a></li>
+					</ul>
+					<br clear="both">
+				</div>
+				<div id="tab-content">
+					<div class="active tab-pane" id="recent-note">
+						<ul>
+							<li><a href="">2013手游经验教训：不要品质要体验 品牌更重要</a></li>
+							<li><a href="">不可不知的移动色彩设计新趋势</a></li>
+							<li><a href=""></a></li>
+							<li><a href=""></a></li>
+							<li><a href=""></a></li>
+						</ul>
+					</div>
+
+					<div class="tab-pane" id="mobil-download">
+						<h2>移动端应用下载</h2>
+					</div>
+					<div class="tab-pane" id="activity">
+						<h2>专题活动</h2>
+					</div>
+					<div class="tab-pane" id="vip">vip定制</div>
+					<div class="tab-pane" id="effective">效率类软件推荐</div>
+
+					<div class="tab-pane" id="manager">
+						<ul id="manager-ul">
+							<li>
+								<input type="checkbox" data-idstr="#recent-note" />
+								<span>近期笔记</span>
+							</li>
+							<li>
+								<input type="checkbox" data-idstr="#mobil-download" />
+								<span>移动端下载</span>
+							</li>
+							<li>
+								<input type="checkbox" data-idstr="#vip" />
+								<span>vip定制</span>
+							</li>
+							<li>
+								<input type="checkbox" data-idstr="#activity" />
+								<span>活动专题</span>
+							</li>
+							<li>
+								<input type="checkbox" data-idstr="#effective" />
+								<span>效率类汇聚</span>
+							</li>
+							<li>
+								<input type="checkbox" data-idstr="#tips" />
+								<span>为知小建议</span>
+							</li>
+
+						</ul>
+						<a class="btn" id="save-setting">保存</a>
+						<a class="btn" id="cancel-setting">取消</a>
+					</div>
+				</div>
+			</div>
+
+			<article id="tips">
+				<span id="close-tip"></span>
+			</article>
+		</section>
+
+		<footer></footer>
+	</body>
+
+</html> 

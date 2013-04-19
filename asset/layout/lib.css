@@ -1,0 +1,134 @@
+body{
+	margin: 0;
+	padding: 5px;
+	height: 100%;
+	font: 1em 'Microsoft Yahei';
+	overflow: auto;
+}
+
+header, footer{
+	display: none;
+}
+
+/* -------------- 三大模块的通用样式 --------------------*/
+#noti-center, #main, #tips{
+	position: static;
+	width: 100%;
+	padding-left: 12px;
+	padding-right: 12px;
+	/* --for clear&simple --*/
+	margin-bottom: 10px;
+	/*outline: 1px dashed purple;*/
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.disabled{
+	display: none;
+}
+/*----------------    通知中心  -------------------*/
+#noti-center{
+	height: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+}
+#noti-title{
+	margin: 0;
+	padding: 0;
+}
+
+/*----------------    内容核心部分 tab  -------------------*/
+
+#main{
+	margin: 10px 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+#tab-ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.tab-item{
+	float: left;
+	margin: 0;
+	padding: 0;
+	border-bottom:1px solid #999 ;
+	/*background: #f5f5f5;*/
+}
+.tab-item.disabled{
+	display: none;
+}
+li.active{
+	background: #accded;
+	/*border: 1px solid #ccc;*/
+	border-bottom: 1px solid #accded;
+	border-radius: 5px 5px 0 0;
+}
+
+.tab-item a{
+	display: inline-block;
+	/*margin: 5px 0;*/
+	padding: 8px 10px;
+	/*line-height: 200%;*/
+}
+
+#tab-content{
+	overflow: auto
+}
+
+/* 关于权重的问题 */
+
+#tab-content .tab-pane.active{
+	display: block;
+}
+
+#tab-content .tab-pane{
+	padding: 15px 0;
+	display: none;
+}
+/*----------------    tips   -------------------*/
+
+#tips{
+	position: relative;
+	width: 60%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	min-height: 300px;
+	background: #d0be62;
+}
+
+#close-tip{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	/*border-radius: 8px*/
+	/*font-family: */
+	background: url('../image/close.png') no-repeat;
+}
+
+/* ----------------   排版样式    ---------------- */
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+ul li{
+	margin: 0 0 5px 0;
+}
+a{
+	text-decoration: none;
+}
+
+.btn{
+	display: inline-block;
+	padding: 5px 8px;
+	cursor: pointer;
+	background: #accded;
+	box-shadow: 0 1px 3px rgb(0,0,0,0.5);
+}
