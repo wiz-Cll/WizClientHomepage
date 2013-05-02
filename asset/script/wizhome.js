@@ -11,6 +11,11 @@ $(document).ready( initHome );
 // @func 初始化首页的函数，操作包括：读取用户设置，显示tab和tabcontent
 //                      读取客户端数据库，进行相关操作
 function initHome(){
+
+
+	alert( objApp );
+	alert( objDatabase );
+	
 	initTab();
 	cookieAffect();
 	$('#save-setting').click(saveSetting);

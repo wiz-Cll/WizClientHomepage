@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<body>
+
+<div id="topad" style="white-space:nowrap;display:none;height:230px;width:100%;background-color:#0070C0;z-index:1000;float:center;position: absolute;text-align:center;">
+
+	<a href="http://www.wiz.cn/wizelite1.html" target="_blank" title="让优秀者卓越活动">
+	<img src="topad_elite1.png" border="0">
+	</a>
+		
+			
+			<a href="http://www.wiz.cn/aliyun" target="_blank" title="阿里云服务"><img src="topad_wizaliyun.png" border="0"></a>
+	&nbsp;&nbsp;
+	
+
+
+	<div style="z-index: 1000; position: absolute; float:right; right:0px; top:0;">
+		<a href="javascript:closetopad();" title="不再显示广告"><img src="/welcome/topad_close.png" border="0"></a>
+	</div>
+</div>
+<script language="javascript">
+	function setCookie(name,value)
+	{
+		var Days = 365;//1年
+		var exp = new Date(); 
+		exp.setTime(exp.getTime() + Days*24*60*60*1000);
+		document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+	}
+	//读取cookies
+	function getCookie(name)
+	{
+		var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+		if(arr=document.cookie.match(reg)) return unescape(arr[2]);
+		else return null;
+	}
+	//删除cookies
+	function delCookie(name)
+	{
+		var exp = new Date();
+		exp.setTime(exp.getTime() - 1);
+		var cval=getCookie(name);
+		if(cval!=null) document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+	}
+	function closetopad()
+	{
+		document.getElementById("topad").style.display="none";
+		setCookie("topad_elite1", "hide");
+	}
+	function showtopad(){
+		var topadcookie = getCookie("topad_elite1");
+		if(topadcookie == null)
+		{
+			document.getElementById("topad").style.display="block";
+		}
+	}
+//	showtopad();
+</script>
+<div style="z-index: 1" id="header">
+	<div id="navigate">
+		<div id="welcome">
+		欢迎使用
+	<!--&nbsp;&nbsp;<a href='http://bbs.wiz.cn/forum.php?mod=viewthread&tid=18828&page=1' target='_blank'><font style='font-size:9pt;color:white;'>4.19(周五)《善用为知笔记》网络公开课，参与有奖</font></a>
+	--></div>
+	
+	</div>
+	<div id="topright">
+<!--			-->
+	</div>
+</div>
+<div style="z-index: 1" id="body">
+	<div id="adban">
+					<a href="http://blog.wiz.cn/wiz3-news" target="_blank" title="Wiz3.0正式发布"><img src="down3.0.gif" border="0" style="margin-bottom:-10px;"></a>
+		
+				
+		</div>
+	<!--
+	<div id="online">
+		<span id="spanUserName">your@email.com</span>&nbsp;<span id="spanStorageUsage"></span>
+	</div>
+	-->
+	<div id="sidebar" style="right: 0; top: 100px">
+		<div id="calendarbar">
+			<div class="Title">
+				<a href="javaScript:subMonth();" title="上一月" class="DayButton">3</a>
+				<input class="dateinput" name="year" type="text" size="4" maxlength="4" onkeydown="if (event.keyCode==13){setDate()}" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onpaste="this.value=this.value.replace(/[^0-9]/g,'')" /> 
+				年 
+				<input class="dateinput" name="month" type="text" size="1" maxlength="2" onkeydown="if (event.keyCode==13){setDate()}" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onpaste="this.value=this.value.replace(/[^0-9]/g,'')" /> 
+				月 <a href="JavaScript:addMonth();" title="下一月" class="DayButton">
+				4</a> </div>
+			<table border="0" cellpadding="0" cellspacing="1" class="Calendar" id="caltable">
+				<tr align="center" valign="middle">
+					<script language="javascript">
+   document.write("<td class=DaySunTitle id=diary >" + days[0] + "</td>"); 
+   for (var intLoop = 1; intLoop < days.length-1;intLoop++)
+    document.write("<td class=DayTitle id=diary>" + days[intLoop] + "</td>"); 
+   document.write("<td class=DaySatTitle id=diary>" + days[intLoop] + "</td>"); 
+  </script>
+				</tr>
+				<tbody id="calendar" align="center" onclick="getCalendarEvent()">
+					<script language="javascript">
+  for (var intWeeks = 0; intWeeks < 6; intWeeks++)
+  {
+   document.write("<TR style='cursor:hand'>");
+   for (var intDays = 0; intDays < days.length; intDays++) document.write("<TD class=CalendarTD onMouseover='buttonOver();' onMouseOut='buttonOut();'></TD>");
+   document.write("</TR>");
+  } 
+ </script>
+			</table>
+		</div>
+<div id="leftad"  style="padding-top:10px;">
+		<img src="/welcome/downloadqr.png" border=0>
+	</div>
+	<div id="leftad"  style="padding-top:10px;">
+		<img src="/welcome/weixinqr.png" border=0>
+	</div>
+	<div id="leftad"  style="padding-top:10px;display:none;">
+		<a href="http://weibo.com/wiz2011" target="_blank" title="关注为知笔记"><img src="/welcome/weiboqr.png" border=0></a>
+	</div>
+
+<div id="tips">
+			<ul>
+			</ul>
+		</div>
+	</div>
+	<div id="quicklunch">
+		<a href="wiz:new_document">新建笔记</a> <a href="wiz:new_event">
+		待办</a>
+		<a href="wiz:new_contact">联系人</a>
+		<a href="wiz:new_journal">日记</a></div>
+	<div id="todolist">
+		<h3>待办事宜</h3>
+		<ol id="listTodo">
+		</ol>
+	</div>
+	<div id="historylist">
+		<h3>最后修改</h3>
+		<ul id="listHistory">
+		</ul>
+	</div>
+</div>
+<div id="footer">
+	©2013  <a href="http://wiz.cn/">wiz.cn</a>&nbsp;
+	<a href="http://bbs.wiz.cn/forum-39-1.html">论坛</a>&nbsp;
+	<a href="mailto:support@wiz.cn">联系我们</a>&nbsp;
+	<a href="http://feedback.wiz.cn/feedback/?product=Wiz">反馈</a>&nbsp;
+</div>
+
+
+<script language="javascript" type="text/javascript">
+	function relocatfooter(){
+		var containerHeight = document.getElementById("body").scrollHeight;
+		var footer = document.getElementById("footer")
+		var allHeight = document.documentElement.clientHeight;
+		
+		if(containerHeight < allHeight){
+			footer.style.position = "absolute";
+			footer.style.bottom = "0"
+		}
+		else{
+			footer.style.positong = "";
+			footer.style.bottom = "";
+			}
+		footer.style.visibility="visible";
+		footer.style.textAlign="left";
+	}
+	
+	window.onload = function(){
+		relocatfooter();
+	}
+
+	window.onresize = function(){
+		relocatfooter();
+	}
+</script>
+
+
+<script language="JavaScript" type="text/javascript">
+
+    function DateToStr(dt) {
+        return "" + dt.getFullYear() + "-" + (dt.getMonth() + 1) + "-" + dt.getDate();
+    }
+    function StrToDate(str) {
+        var timePos = str.indexOf(" ");
+        if (timePos != -1) {
+            str = str.substring(0, timePos);
+        }
+        var a = str.split('-');
+        if (a.length != 3)
+            return null;
+        //
+        var year = parseInt(a[0], 10);
+        var month = parseInt(a[1], 10);
+        var day = parseInt(a[2], 10);
+        //
+        var ret = new Date();
+        ret.setFullYear(year, month - 1, day);
+        return ret;
+    }
+    function ViewDocument(doc_guid) {
+        var doc = objDatabase.DocumentFromGUID(doc_guid);
+        if (doc != null) {
+            objApp.Window.ViewDocument(doc, true);
+        }
+    }
+    function GetMetaInt(objDatabase, metaName, metaKey, defVal) {
+        var value = objDatabase.Meta(metaName, metaKey);
+        if (value == null)
+            return defVal;
+        if (value == "")
+            return defVal;
+        try {
+            return parseInt(value, 10);
+        }
+        catch (e) {
+            return defVal;
+        }
+    }
+	var objApp = null;
+    var objDatabase = null;
+    try {
+        objApp = external;
+        objDatabase = objApp.Database;
+    }
+    catch (err) {
+        objApp = new ActiveXObject("WizExplorer.WizExplorerApp");
+        objDatabase = objApp.Database;
+    }
+    var begin = new Date();
+    var end = new Date();
+    end.setDate(end.getDate() + 7);
+    //
+    var events = objDatabase.GetCalendarEvents(DateToStr(begin) + " 00:00:00", DateToStr(end) + " 23:59:59");
+Uncaught TypeError: Cannot call method 'GetCalendarEvents' of undefined
+    if (events == null || events.Count == 0) {
+        var item = document.createElement("li");
+        item.innerHTML = "没有待办事宜";
+        listTodo.appendChild(item);
+    }
+    else {
+        for (var i = 0; i < events.Count; i++) {
+            var e = events.Item(i);
+            var item = document.createElement("li");
+            //
+            var eventBegin = StrToDate(e.ParamValue("Calendar_Start"));
+            //
+            var eventBeginString = eventBegin.toLocaleDateString();
+            //
+            item.innerHTML = "<a href=\"javascript:void();\" onclick=\"ViewDocument('" + e.GUID + "');\" >" + e.Title + "</a>&nbsp;(" + eventBeginString + ")";
+            listTodo.appendChild(item);
+        }
+    }
+    //
+    var recentDocuments = objDatabase.GetRecentDocuments("", 10);
+    for (var i = 0; i < recentDocuments.Count; i++) {
+        var doc = recentDocuments.Item(i);
+        var item = document.createElement("li");
+        //
+        var dateModified = new Date(doc.DateModified);
+        //
+        var dateModifiedString = dateModified.toLocaleDateString();
+        //
+        item.innerHTML = "<a href=\"javascript:void();\" onclick=\"ViewDocument('" + doc.GUID + "');\" >" + doc.Title + "</a>&nbsp;(" + dateModifiedString + ")";
+        listHistory.appendChild(item);
+    }
+    //
+  //  var userName = objDatabase.Meta("Account", "UserName");
+ //   spanUserName.innerHTML = userName;
+    //
+ //   var serverInfoMetaName = "SERVER_INFO";
+ //   var storageLimit = GetMetaInt(objDatabase, serverInfoMetaName, "storage_limit", 0);
+ //   var storageUsage = GetMetaInt(objDatabase, serverInfoMetaName, "storage_usage", 0);
+    //
+    //<img alt="usage" src="useage.gif" width="110" height="8" />
+    //var storageFree = storageLimit - storageUsage;
+ /*   var pWidth=100;
+    var pHeight=8;
+    var wUsage = 0;
+    var wFree = pWidth;
+    var usagepic = "space_useage.gif";
+    if(storageLimit>0)
+    {
+    	var percent =  storageUsage/storageLimit;
+    	if(percent >= 0.8) usagepic = "space_warning.gif";
+    	wUsage = parseInt(pWidth * storageUsage/storageLimit);
+    	wFree = pWidth - wUsage;
+    }
+    var txtTip = "共"+storageLimit+"M, 已使用"+storageUsage+"M";
+    var htmlUsage = '<img alt="'+ txtTip +'" src="' + usagepic + '" width="' + wUsage + '" height="'+ pHeight +'" />';
+    var htmlFree  = '<img alt="'+ txtTip +'" src="space_free.gif" width="' + wFree + '" height="'+ pHeight +'" />';
+    
+    spanStorageUsage.innerHTML = htmlUsage + htmlFree;
+*/
+</script>
+
+<script language="javascript">
+    Calendar();
+</script>
+<span id="id_wiz_welcome"></span>
+<span id="id_wizknowledge_welcome"></span>
+	
+</script>
+
+<script type="text/javascript">
+
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd1089f6484c02328c97e3c1c54603cdc' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+</body>
+</html>
