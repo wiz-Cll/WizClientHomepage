@@ -68,6 +68,8 @@ function cookieAffect(){
 			}
 		}
 		else{
+			$manager.find('input').attr('checked', true);
+			saveSetting();
 			// 用户尚未配置 或 配置被清除
 		}
 		
