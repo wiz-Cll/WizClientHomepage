@@ -4,6 +4,7 @@ body{
 	height: 100%;
 	font: 1em 'Microsoft Yahei';
 	overflow: auto;
+	display: none;
 }
 
 header, footer{
@@ -83,7 +84,8 @@ header, footer{
 }
 
 #tab-content{
-	overflow: auto
+	overflow: auto;
+	padding: 0 1em;
 }
 
 /* 关于权重的问题 */
@@ -96,6 +98,23 @@ header, footer{
 	padding: 15px 0;
 	display: none;
 }
+
+#recent-note ul{
+
+}
+
+#recent-note ul li{
+	margin: 0.25em 0 0 0;
+	font-size: 0.75em;
+	color: #999;
+	font-style: italic;
+}
+#recent-note ul li a{
+	font-size: 1.33em;
+	font-style: normal;
+	cursor: pointer;
+}
+
 /*----------------    tips   -------------------*/
 
 #tips{
@@ -131,6 +150,7 @@ ul li{
 a{
 	text-decoration: none;
 }
+
 
 .btn{
 	display: inline-block;

@@ -13,6 +13,7 @@ $(document).ready( initHome );
 function initHome(){
 	initTab();
 	cookieAffect();
+	i18n();
 	$('#save-setting').click(saveSetting);
 	$('#cancel-setting').click(cancelSetting);
 	$('#close-tip').click( function(){
@@ -79,6 +80,58 @@ function cookieAffect(){
 	}
 }
 
+function i18n(){
+	var language = navigator.language || navigator.browserLanguage ;
+	var showLang;
+	// 如果是简体中文
+	if( language === 'zh-CN'){
+		showLang = 'zh_CN';
+	}
+	else{
+		// 中文  却非简体 使用zh_TW
+		if( /zh/.test( language ) ){
+			showLang = 'zh_TW';
+		}
+		// 非中文  全部默认英文
+		else{
+			showLang = 'en';
+		}
+	}
+	// showLang = 'en';
+	fillInLang( langs[showLang] );
+
+	function fillInLang( obj ){
+		var $tabs = $('#tab-ul');
+		var $settings = $('#manager-ul');
+
+		for( var i in obj ){
+			try{
+				$tabs.find( '[href="#' + i + '"]' ).text( obj[i] );
+			}
+			catch(err){
+
+			}
+			try{
+				$settings.find( '[data-idstr="#'+i+'"]' ).siblings('span').text( obj[i] );
+			}
+			catch( err ){
+
+			}
+
+
+		}
+		for(var j in obj['btns'] ){
+			try{
+				$('#'+j).text( obj['btns'][j] );
+			}
+			catch(err){
+				console.log(err);
+			}
+		}
+		
+		$('body').show();
+	}
+}
 
 function bindCheckboxHandler(){
 	$("#info_table").delegate('input[type="checkbox"]','click',function(event){

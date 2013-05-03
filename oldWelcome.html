@@ -1,6 +1,175 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>欢迎使用为知笔记</title>
+<style type="text/css">
+body {
+	background-color: #FFFFFF;
+	padding: 0px;
+	margin: 0px;
+	font-size:9pt;
+	font-family: 宋体, Arial, Helvetica, sans-serif;
+	line-height: 150%;
+}
+#header {
+	width: 100%;
+	height: 49px;
+	background-color: #0072C6;
+}
+#navigate {
+	height: 30px;
+	float: left;
+	left: 30px;
+	top: 8px;
+	position: absolute;
+	z-index: 100;
+}
+#topright {
+	width: 200px;
+	height: 49px;
+	float: right;
+	right: 0px;
+	position: absolute;
+/*	background-image: url('topright.jpg');*/
+	z-index: 101;
+}
+#body {
+	min-height: 420px;
+	padding: 10px 30px 10px 30px;
+/*	background-image: url('ball.gif');
+	background-repeat: no-repeat;
+	background-position: left top;*/
+	height:100%;
+}
+#welcome {
+	z-index: 200;
+	width: 200px;
+	position: relative;
+	font-family: 微软雅黑;
+	font-size: 2em;
+	line-height: 120%;
+	white-space:nowrap;
+	color:white;
+}
 
+#adban {
+	z-index: 0;
+	position: absolute;
+	float:right;
+	right:250px;
+	top:53px;
+	font-family: 微软雅黑;
+	white-space:nowrap;
+}
+#online {
+	position: absolute;
+	top: 60px;
+	height: 14px;
+	z-index: 203;
+	float: right;
+	right: 30px;
+	text-align: right;
+}
+#sidebar {
+	float: right;
+	right: 0;
+	top: 100px;
+	border-left: #0072C6 1px solid;
+	width: 200px;
+	padding: 0 0 0em 1em;
+	margin: 0 0 0em 1em;
+	background-color:white;
+	z-index:210;
+}
+#calendarbar {
+}
+
+#tips a{
+	text-decoration: none;
+}
+
+#tips a:hover{
+	color:red;
+	text-decoration: underline;
+}
+
+#weibo{
+	padding-top: 1em;
+
+}
+#tips {
+	padding-top: 1em;
+	font-size: 9pt;
+	line-height: 1.2;
+}
+#tips ul {
+	padding-left: 1em;
+	margin-left: 0px;
+}
+#tips li {
+	text-indent: -1em;
+	padding-left: 0px;
+	margin-left: 0px;
+	padding-top: 4px;
+	list-style-type: none;
+}
+#tips .ad_{
+	
+}
+#tips .ad_hilight{
+	color:red;
+}
+#tips .ad_important{
+	font-weight: bold;
+}
+#tips .ad_question{
+	color:darkgreen;
+}
+
+#adzone {
+	margin-left: 30px;
+}
+#footer {
+	text-align: left;
+	font-size: 1em;
+	color: gray;
+	padding:0.5em 2em 0.5em 2em;
+	visibility: hidden;
+/*	width:100%; */
+	z-index:0;
+	background-color:white;
+
+}
+#quicklunch {
+	font-size: 1.2em;
+	padding: 1.5em 0 0.5em 0;
+	font-weight: bold;
+}
+#todolist {
+	font-size: 1em;
+}
+#todolist h3 {
+	font-size: 1.2em;
+}
+#todolist li {
+	line-height: 125%;
+}
+#historylist {
+	font-size: 1em;
+}
+#historylist h3 {
+	font-size: 1.2em;
+}
+#historylist li {
+	line-height: 125%;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="cal.css" />
+<link rel="stylesheet" type="text/css" href="donate/donate.css" />
+<script type="text/javascript" src="asset/script/cal.js">
+</script>
+</head>
 
 <body>
 
@@ -66,13 +235,14 @@
 	
 	</div>
 	<div id="topright">
-<!--			-->
+<!--			<img alt="VIP" border="0" src="vip.gif" width="64" height="17" style="margin-left:105px; margin-top:18px;" />-->
 	</div>
 </div>
 <div style="z-index: 1" id="body">
 	<div id="adban">
-					<a href="http://blog.wiz.cn/wiz3-news" target="_blank" title="Wiz3.0正式发布"><img src="down3.0.gif" border="0" style="margin-bottom:-10px;"></a>
-		
+				<!-- 
+			<a href="http://www.wiz.cn/name.html" target="_blank" title="一字千金，为知邀您取名"><img src="1000name.gif" border="0" style="margin-bottom:-10px;"></a>
+		-->
 				
 		</div>
 	<!--
@@ -109,7 +279,14 @@
  </script>
 			</table>
 		</div>
-<div id="leftad"  style="padding-top:10px;">
+<!--	<div id="leftad"  style="padding-top:10px;">
+		<a href="http://www.kmcenter.org/fuwu/pkmpeixun.htm?wiz" target="_blank" title="参加个人知识管理课程"><img src="/welcome/leftad_kmc.png" border=0></a>
+	</div>
+
+	<div id="leftad"  style="padding-top:10px;">
+		<a href="http://m.anzhi.com/redirect.php?do=dlapk&puid=720" target="_blank" title="推荐下载安智市场apk"><img src="/welcome/downloadanzhi.jpg" border=0></a>
+	</div>
+-->	<div id="leftad"  style="padding-top:10px;">
 		<img src="/welcome/downloadqr.png" border=0>
 	</div>
 	<div id="leftad"  style="padding-top:10px;">
@@ -118,7 +295,11 @@
 	<div id="leftad"  style="padding-top:10px;display:none;">
 		<a href="http://weibo.com/wiz2011" target="_blank" title="关注为知笔记"><img src="/welcome/weiboqr.png" border=0></a>
 	</div>
-
+<!--
+<div id="weibo">
+	<iframe width="203" height="300" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?width=203&height=300&fansRow=2&ptype=0&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=1920682763&verifier=6deb1a8d"></iframe>
+</div>
+-->
 <div id="tips">
 			<ul>
 			</ul>
@@ -227,12 +408,12 @@
         objApp = new ActiveXObject("WizExplorer.WizExplorerApp");
         objDatabase = objApp.Database;
     }
+    alert( objApp );
     var begin = new Date();
     var end = new Date();
     end.setDate(end.getDate() + 7);
     //
     var events = objDatabase.GetCalendarEvents(DateToStr(begin) + " 00:00:00", DateToStr(end) + " 23:59:59");
-Uncaught TypeError: Cannot call method 'GetCalendarEvents' of undefined
     if (events == null || events.Count == 0) {
         var item = document.createElement("li");
         item.innerHTML = "没有待办事宜";
